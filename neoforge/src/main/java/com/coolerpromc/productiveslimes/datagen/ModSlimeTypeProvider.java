@@ -54,7 +54,7 @@ public class ModSlimeTypeProvider {
 
         b.bred(SlimeTypes.DRIPSTONE, 0x866B5C, Items.POINTED_DRIPSTONE, Items.DRIPSTONE_BLOCK, 2, 2, TIER_2, SlimeTypes.STONE, SlimeTypes.MUD, Blocks.DRIPSTONE_BLOCK);
         b.bred(SlimeTypes.ICE, 0x89B1FC, Items.ICE, Items.ICE, 1, 2, TIER_2, SlimeTypes.SNOW, SlimeTypes.SNOW, Blocks.ICE);
-        b.bred(SlimeTypes.COPPER, 0xC46D4A, Items.RAW_COPPER, Items.COPPER_INGOT, 1, 2, TIER_2, SlimeTypes.STONE, SlimeTypes.COAL, Blocks.COPPER_BLOCK.weathering().unaffected());
+        b.bred(SlimeTypes.COPPER, 0xC46D4A, Items.RAW_COPPER, Items.COPPER_INGOT, 1, 2, TIER_2, SlimeTypes.STONE, SlimeTypes.COAL, Blocks.COPPER_BLOCK);
         b.bred(SlimeTypes.NETHERRACK, 0x763535, Items.NETHERRACK, Items.NETHERRACK, 2, 2, TIER_2, SlimeTypes.STONE, SlimeTypes.COAL, Blocks.NETHERRACK);
         b.bred(SlimeTypes.PRISMARINE, 0x63A08F, Items.PRISMARINE_SHARD, Items.PRISMARINE_SHARD, 2, 2, TIER_2, SlimeTypes.SAND, SlimeTypes.CLAY, Blocks.PRISMARINE);
         b.bred(SlimeTypes.BROWN_MUSHROOM, 0x967251, Items.BROWN_MUSHROOM, Items.BROWN_MUSHROOM, 2, 2, TIER_2, SlimeTypes.MUD, SlimeTypes.MOSS, Blocks.BROWN_MUSHROOM_BLOCK);

@@ -46,7 +46,7 @@ import java.util.function.Supplier;
 
 public class ProductiveSlimesClient {
     public static void init(){
-        GuideBookItem.openScreen = () -> Minecraft.getInstance().gui.setScreen(new BookViewScreen(new BookViewScreen.BookAccess(GuideBookItem.pages())));
+        GuideBookItem.openScreen = () -> Minecraft.getInstance().setScreen(new BookViewScreen(new BookViewScreen.BookAccess(GuideBookItem.pages())));
     }
 
     public static void initAll(){

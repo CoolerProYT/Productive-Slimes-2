@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "B": "productiveslimes:slimy_stone_bricks",
     "C": "productiveslimes:slime_crystal",

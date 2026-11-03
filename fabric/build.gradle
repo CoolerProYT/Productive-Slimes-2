@@ -14,7 +14,7 @@ dependencies {
     compileOnly("maven.modrinth:jade:${jade_version}+fabric")
 
     // In the dev runs only (runClient/runServer); not published as dependencies of the mod.
-    localRuntime("com.coolerpromc.mctest:mctest-fabric-${minecraft_version}:26.2.0.1") { transitive = false }
+    localRuntime("com.coolerpromc.mctest:mctest-fabric-${minecraft_version}:26.1.2.1") { transitive = false }
 //    localRuntime("mezz.jei:jei-${dependencies_mc_version}-fabric:${jei_version}")
 //    localRuntime("maven.modrinth:jade:${jade_version}+fabric")
 }

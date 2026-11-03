@@ -33,7 +33,8 @@ import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.monster.cubemob.AbstractCubeMob;
+import com.coolerpromc.productiveslimes.mixin.SlimeMoveControlInvoker;
+import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemStackTemplate;
@@ -54,7 +55,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.Optional;
 
-public class ProductiveSlime extends AbstractCubeMob {
+public class ProductiveSlime extends Slime {
     private static final EntityDataAccessor<Holder<SlimeType>> DATA_SLIME_TYPE = SynchedEntityData.defineId(ProductiveSlime.class, ModEntityDataSerializers.SLIME_TYPE.get());
 
     public static final int MAX_SLIME_SIZE = 4;
@@ -77,6 +78,7 @@ public class ProductiveSlime extends AbstractCubeMob {
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes()
                 .add(Attributes.MOVEMENT_SPEED, 0.2F)
+                .add(Attributes.ATTACK_DAMAGE, 0.0F)
                 .add(Attributes.FOLLOW_RANGE, 16.0F);
     }
 
@@ -91,13 +93,11 @@ public class ProductiveSlime extends AbstractCubeMob {
     }
 
     @Override
-    protected void addBehaviourGoals() {
+    protected void registerGoals() {
+        super.registerGoals();
+        this.targetSelector.removeAllGoals(goal -> true);
         this.goalSelector.addGoal(2, new SlimeBreedGoal(this));
         this.goalSelector.addGoal(3, new SlimeTemptGoal(this));
-    }
-
-    @Override
-    protected void addTargetingGoals() {
     }
 
     public Holder<SlimeType> getSlimeType() {
@@ -285,17 +285,18 @@ public class ProductiveSlime extends AbstractCubeMob {
         if (spawnReason == EntitySpawnReason.NATURAL || spawnReason == EntitySpawnReason.CHUNK_GENERATION) {
             SlimeTypes.randomNaturalSpawn(level.registryAccess(), level.getRandom()).ifPresent(this::setSlimeType);
         }
-        return super.finalizeSpawn(level, difficulty, spawnReason, groupData);
-    }
-
-    @Override
-    protected void setSpawnSize(ServerLevelAccessor level, DifficultyInstance difficulty) {
+        SpawnGroupData data = super.finalizeSpawn(level, difficulty, spawnReason, groupData);
         this.setSize(level.getRandom().nextBoolean() ? 1 : 2, true);
+        return data;
     }
 
     @Override
-    protected int getSplitCount() {
-        return 0;
+    public void remove(RemovalReason reason) {
+        // Productive slimes don't split on death
+        if (!this.level().isClientSide() && this.isDeadOrDying()) {
+            this.setSize(1, false);
+        }
+        super.remove(reason);
     }
 
     @Override
@@ -374,9 +375,9 @@ public class ProductiveSlime extends AbstractCubeMob {
         double dz = z - this.getZ();
         float yRot = (float) (net.minecraft.util.Mth.atan2(dz, dx) * (180.0F / Math.PI)) - 90.0F;
         this.setYRot(yRot);
-        if (this.getMoveControl() instanceof AbstractCubeMob.CubeMobMoveControl<?> control) {
-            control.setDirection(yRot, false);
-            control.setWantedMovement(1.0);
+        if (this.getMoveControl() instanceof SlimeMoveControlInvoker control) {
+            control.productiveslimes$setDirection(yRot, false);
+            control.productiveslimes$setWantedMovement(1.0);
         }
     }
 

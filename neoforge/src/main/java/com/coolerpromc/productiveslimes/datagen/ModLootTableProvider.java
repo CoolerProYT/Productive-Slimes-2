@@ -102,7 +102,7 @@ public final class ModLootTableProvider {
                     .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                             .add(entry(ModItems.SPEED_UPGRADE, 3, 1, 1))
                             .add(entry(ModBlocks.SLIME_PEN, 2, 1, 1))
-                            .add(entry(Items.COPPER_BLOCK.weathering().unaffected(), 1, 1, 1))
+                            .add(entry(Items.COPPER_BLOCK, 1, 1, 1))
                             .add(entry(ModItems.SLIME_CRYSTAL, 4, 4, 8))));
         }
 

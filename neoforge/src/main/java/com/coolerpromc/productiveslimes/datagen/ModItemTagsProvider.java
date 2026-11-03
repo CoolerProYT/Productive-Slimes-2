@@ -5,10 +5,7 @@ import com.coolerpromc.productiveslimes.block.ModBlocks;
 import com.coolerpromc.productiveslimes.platform.util.RegistryHandler;
 import com.coolerpromc.productiveslimes.tag.ModTags;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.tags.BlockItemTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -23,18 +20,18 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        add(BlockItemTags.LOGS_THAT_BURN.item(), ModBlocks.SLIMY_LOG, ModBlocks.SLIMY_WOOD, ModBlocks.STRIPPED_SLIMY_LOG, ModBlocks.STRIPPED_SLIMY_WOOD);
+        add(ItemTags.LOGS_THAT_BURN, ModBlocks.SLIMY_LOG, ModBlocks.SLIMY_WOOD, ModBlocks.STRIPPED_SLIMY_LOG, ModBlocks.STRIPPED_SLIMY_WOOD);
         add(ModTags.SLIMY_LOGS, ModBlocks.SLIMY_LOG, ModBlocks.SLIMY_WOOD, ModBlocks.STRIPPED_SLIMY_LOG, ModBlocks.STRIPPED_SLIMY_WOOD);
-        add(BlockItemTags.PLANKS.item(), ModBlocks.SLIMY_PLANKS);
-        add(BlockItemTags.WOODEN_STAIRS.item(), ModBlocks.SLIMY_STAIRS);
-        add(BlockItemTags.WOODEN_SLABS.item(), ModBlocks.SLIMY_SLAB);
-        add(BlockItemTags.WOODEN_FENCES.item(), ModBlocks.SLIMY_FENCE);
-        add(BlockItemTags.FENCE_GATES.item(), ModBlocks.SLIMY_FENCE_GATE);
-        add(BlockItemTags.WOODEN_DOORS.item(), ModBlocks.SLIMY_DOOR);
-        add(BlockItemTags.WOODEN_TRAPDOORS.item(), ModBlocks.SLIMY_TRAPDOOR);
-        add(BlockItemTags.WOODEN_BUTTONS.item(), ModBlocks.SLIMY_BUTTON);
-        add(BlockItemTags.WOODEN_PRESSURE_PLATES.item(), ModBlocks.SLIMY_PRESSURE_PLATE);
-        add(BlockItemTags.SAPLINGS.item(), ModBlocks.SLIMY_SAPLING);
+        add(ItemTags.PLANKS, ModBlocks.SLIMY_PLANKS);
+        add(ItemTags.WOODEN_STAIRS, ModBlocks.SLIMY_STAIRS);
+        add(ItemTags.WOODEN_SLABS, ModBlocks.SLIMY_SLAB);
+        add(ItemTags.WOODEN_FENCES, ModBlocks.SLIMY_FENCE);
+        add(ItemTags.FENCE_GATES, ModBlocks.SLIMY_FENCE_GATE);
+        add(ItemTags.WOODEN_DOORS, ModBlocks.SLIMY_DOOR);
+        add(ItemTags.WOODEN_TRAPDOORS, ModBlocks.SLIMY_TRAPDOOR);
+        add(ItemTags.WOODEN_BUTTONS, ModBlocks.SLIMY_BUTTON);
+        add(ItemTags.WOODEN_PRESSURE_PLATES, ModBlocks.SLIMY_PRESSURE_PLATE);
+        add(ItemTags.SAPLINGS, ModBlocks.SLIMY_SAPLING);
         add(ItemTags.LEAVES, ModBlocks.SLIMY_LEAVES);
         add(ItemTags.DIRT, ModBlocks.SLIMY_DIRT, ModBlocks.SLIMY_GRASS_BLOCK);
         add(ItemTags.WALLS, ModBlocks.SLIMY_STONE_BRICK_WALL);
@@ -46,7 +43,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     private void add(TagKey<Item> tag, RegistryHandler.Blocks<?>... blocks) {
         var appender = tag(tag);
         for (RegistryHandler.Blocks<?> block : blocks) {
-            appender.add(ResourceKey.create(Registries.ITEM, block.id()));
+            appender.add(block.get().asItem());
         }
     }
 }

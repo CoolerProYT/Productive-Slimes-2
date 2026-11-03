@@ -24,8 +24,6 @@ import net.minecraft.resources.Identifier;
 
 public class ModModelProvider extends ModelProvider {
     public static final BlockFamily SLIMY_PLANKS = new BlockFamily.Builder(ModBlocks.SLIMY_PLANKS.get())
-            .log(ModBlocks.SLIMY_LOG.get())
-            .strippedLog(ModBlocks.STRIPPED_SLIMY_LOG.get())
             .button(ModBlocks.SLIMY_BUTTON.get())
             .fence(ModBlocks.SLIMY_FENCE.get())
             .fenceGate(ModBlocks.SLIMY_FENCE_GATE.get())
