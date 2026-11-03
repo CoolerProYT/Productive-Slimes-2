@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "productiveslimes:item/slimeball",
+    "tints": [
+      {
+        "type": "productiveslimes:slime_type",
+        "default": -8470674
+      }
+    ]
+  }
+}

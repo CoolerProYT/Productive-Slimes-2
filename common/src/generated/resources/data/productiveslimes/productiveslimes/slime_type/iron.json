@@ -1,0 +1,14 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:iron_block",
+    "parent_a": "productiveslimes:copper",
+    "parent_b": "productiveslimes:stone"
+  },
+  "color": "#D8D8D8",
+  "food": "minecraft:raw_iron",
+  "production_time": 3600,
+  "squeeze_result": {
+    "id": "minecraft:iron_ingot"
+  },
+  "tier": 3
+}

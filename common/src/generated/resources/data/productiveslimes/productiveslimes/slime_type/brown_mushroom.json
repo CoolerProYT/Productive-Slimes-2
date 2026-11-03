@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:brown_mushroom_block",
+    "parent_a": "productiveslimes:mud",
+    "parent_b": "productiveslimes:moss"
+  },
+  "color": "#967251",
+  "food": "minecraft:brown_mushroom",
+  "production_time": 2400,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:brown_mushroom"
+  },
+  "tier": 2
+}

@@ -1,0 +1,14 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:diamond_block",
+    "parent_a": "productiveslimes:gold",
+    "parent_b": "productiveslimes:lapis"
+  },
+  "color": "#4AEDD9",
+  "food": "minecraft:diamond",
+  "production_time": 7200,
+  "squeeze_result": {
+    "id": "minecraft:diamond"
+  },
+  "tier": 5
+}

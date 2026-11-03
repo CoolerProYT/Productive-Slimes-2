@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:tuff",
+    "parent_a": "productiveslimes:stone",
+    "parent_b": "productiveslimes:stone"
+  },
+  "color": "#6C6D66",
+  "food": "minecraft:tuff",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:tuff"
+  },
+  "tier": 1
+}

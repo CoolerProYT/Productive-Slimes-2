@@ -1,0 +1,14 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:obsidian",
+    "parent_a": "productiveslimes:deepslate",
+    "parent_b": "productiveslimes:magma"
+  },
+  "color": "#2B1D45",
+  "food": "minecraft:obsidian",
+  "production_time": 4800,
+  "squeeze_result": {
+    "id": "minecraft:obsidian"
+  },
+  "tier": 4
+}

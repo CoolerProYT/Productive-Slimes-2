@@ -1,0 +1,31 @@
+{
+  "parent": "productiveslimes:main/capture_slime",
+  "criteria": {
+    "big_slime": {
+      "conditions": {
+        "size": {
+          "min": 4
+        }
+      },
+      "trigger": "productiveslimes:capture_slime"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.big_slime.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:slime_block"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.big_slime.title"
+    }
+  },
+  "requirements": [
+    [
+      "big_slime"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

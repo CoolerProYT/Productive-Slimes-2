@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:lapis_block",
+    "parent_a": "productiveslimes:iron",
+    "parent_b": "productiveslimes:clay"
+  },
+  "color": "#1C41BA",
+  "food": "minecraft:lapis_lazuli",
+  "production_time": 4800,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:lapis_lazuli"
+  },
+  "tier": 4
+}

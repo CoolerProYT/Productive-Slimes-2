@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": "minecraft:tool/can_shear",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "productiveslimes:slime_sprouts"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "productiveslimes:blocks/slime_sprouts"
+}

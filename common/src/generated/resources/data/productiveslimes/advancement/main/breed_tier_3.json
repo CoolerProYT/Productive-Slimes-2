@@ -1,0 +1,30 @@
+{
+  "parent": "productiveslimes:main/breed_slime",
+  "criteria": {
+    "breed_tier_3": {
+      "conditions": {
+        "tier": {
+          "min": 3
+        }
+      },
+      "trigger": "productiveslimes:breed_slime"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.breed_tier_3.description"
+    },
+    "icon": {
+      "id": "minecraft:iron_ingot"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.breed_tier_3.title"
+    }
+  },
+  "requirements": [
+    [
+      "breed_tier_3"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

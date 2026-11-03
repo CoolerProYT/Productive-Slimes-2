@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:red_sand",
+    "parent_a": "productiveslimes:sand",
+    "parent_b": "productiveslimes:sand"
+  },
+  "color": "#BB6520",
+  "food": "minecraft:red_sand",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:red_sand"
+  },
+  "tier": 1
+}

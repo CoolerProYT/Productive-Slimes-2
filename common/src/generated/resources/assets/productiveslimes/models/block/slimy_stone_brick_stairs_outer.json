@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "productiveslimes:block/slimy_stone_bricks",
+    "side": "productiveslimes:block/slimy_stone_bricks",
+    "top": "productiveslimes:block/slimy_stone_bricks"
+  }
+}

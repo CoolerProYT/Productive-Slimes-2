@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "productiveslimes:slimy_button"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "productiveslimes:blocks/slimy_button"
+}

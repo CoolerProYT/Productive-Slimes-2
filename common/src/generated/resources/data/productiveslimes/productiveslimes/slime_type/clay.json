@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:clay",
+    "parent_a": "productiveslimes:mud",
+    "parent_b": "productiveslimes:sand"
+  },
+  "color": "#A0A6B3",
+  "food": "minecraft:clay_ball",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 4,
+    "id": "minecraft:clay_ball"
+  },
+  "tier": 1
+}

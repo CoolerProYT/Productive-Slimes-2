@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "productiveslimes:block/slimy_dirt",
+    "particle": "productiveslimes:block/slimy_dirt",
+    "side": "productiveslimes:block/slimy_grass_block_side",
+    "top": "productiveslimes:block/slimy_grass_block_top"
+  }
+}

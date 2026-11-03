@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:dripstone_block",
+    "parent_a": "productiveslimes:stone",
+    "parent_b": "productiveslimes:mud"
+  },
+  "color": "#866B5C",
+  "food": "minecraft:pointed_dripstone",
+  "production_time": 2400,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:dripstone_block"
+  },
+  "tier": 2
+}

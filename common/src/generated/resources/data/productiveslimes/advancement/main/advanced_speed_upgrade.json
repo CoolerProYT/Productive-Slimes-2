@@ -1,0 +1,33 @@
+{
+  "parent": "productiveslimes:main/speed_upgrade",
+  "criteria": {
+    "has_advanced_speed_upgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "productiveslimes:advanced_speed_upgrade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.advanced_speed_upgrade.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "productiveslimes:advanced_speed_upgrade"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.advanced_speed_upgrade.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_advanced_speed_upgrade"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

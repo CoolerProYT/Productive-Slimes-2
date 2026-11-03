@@ -1,0 +1,47 @@
+:root {
+  --vp-c-brand-1: #3f8a2e;
+  --vp-c-brand-2: #4d9c3a;
+  --vp-c-brand-3: #5cae47;
+  --vp-c-brand-soft: rgba(63, 138, 46, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #3f8a2e 20%, #9ccf5a);
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(126, 191, 110, 0.45) 0%, rgba(126, 191, 110, 0) 70%);
+  --vp-home-hero-image-filter: blur(40px);
+
+  --ps-slot-bg: #8b8b8b;
+  --ps-slot-dark: #373737;
+  --ps-slot-light: #ffffff;
+}
+
+.dark {
+  --vp-c-brand-1: #8fd46f;
+  --vp-c-brand-2: #7cc35c;
+  --vp-c-brand-3: #5cae47;
+  --vp-c-brand-soft: rgba(143, 212, 111, 0.16);
+}
+
+/* Pixel art stays crisp at any size. */
+.VPHero .image-src,
+.pixelated {
+  image-rendering: pixelated;
+}
+
+.VPHero .image-src {
+  width: 220px;
+  height: 220px;
+}
+
+.ps-muted {
+  color: var(--vp-c-text-2);
+  font-size: 0.875em;
+}
+
+/* Wide tables scroll inside their box instead of the page */
+.ps-table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.ps-table-wrap table {
+  margin: 0;
+}

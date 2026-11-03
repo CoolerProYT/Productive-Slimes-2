@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": "productiveslimes:slime_crystal",
+    "D": "minecraft:diamond",
+    "U": "productiveslimes:speed_upgrade"
+  },
+  "pattern": [
+    "CDC",
+    "DUD",
+    "CDC"
+  ],
+  "result": {
+    "id": "productiveslimes:advanced_speed_upgrade"
+  }
+}

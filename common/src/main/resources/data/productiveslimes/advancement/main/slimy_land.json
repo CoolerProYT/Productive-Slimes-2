@@ -1,0 +1,36 @@
+{
+  "parent": "productiveslimes:main/root",
+  "criteria": {
+    "in_slimy_land": {
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "biomes": "productiveslimes:slimy_land"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "productiveslimes:slimy_grass_block"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.slimy_land.title"
+    },
+    "description": {
+      "translate": "advancements.productiveslimes.slimy_land.description"
+    }
+  },
+  "requirements": [
+    [
+      "in_slimy_land"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

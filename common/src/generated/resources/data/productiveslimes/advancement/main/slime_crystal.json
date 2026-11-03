@@ -1,0 +1,32 @@
+{
+  "parent": "productiveslimes:main/slimy_land",
+  "criteria": {
+    "has_slime_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "productiveslimes:slime_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.slime_crystal.description"
+    },
+    "icon": {
+      "id": "productiveslimes:slime_crystal"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.slime_crystal.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_slime_crystal"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

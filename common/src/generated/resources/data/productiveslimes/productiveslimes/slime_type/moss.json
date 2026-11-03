@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:moss_block",
+    "parent_a": "productiveslimes:dirt",
+    "parent_b": "productiveslimes:oak"
+  },
+  "color": "#597A30",
+  "food": "minecraft:moss_block",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:moss_block"
+  },
+  "tier": 1
+}

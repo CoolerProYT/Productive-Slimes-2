@@ -1,0 +1,10 @@
+{
+  "color": "#7EBF6E",
+  "food": "minecraft:slime_ball",
+  "natural_spawn": true,
+  "production_time": 1200,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:slime_ball"
+  }
+}

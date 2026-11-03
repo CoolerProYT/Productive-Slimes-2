@@ -1,0 +1,16 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "productiveslimes:item/productive_slime_spawn_egg",
+    "tints": [
+      {
+        "type": "productiveslimes:slime_type",
+        "default": -8470674
+      },
+      {
+        "type": "productiveslimes:slime_type",
+        "default": -8470674
+      }
+    ]
+  }
+}

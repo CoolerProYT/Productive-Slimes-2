@@ -1,0 +1,32 @@
+{
+  "parent": "productiveslimes:main/slime_squeezer",
+  "criteria": {
+    "has_speed_upgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "productiveslimes:speed_upgrade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.speed_upgrade.description"
+    },
+    "icon": {
+      "id": "productiveslimes:speed_upgrade"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.speed_upgrade.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_speed_upgrade"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

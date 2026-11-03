@@ -1,0 +1,14 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:ice",
+    "parent_a": "productiveslimes:snow",
+    "parent_b": "productiveslimes:snow"
+  },
+  "color": "#89B1FC",
+  "food": "minecraft:ice",
+  "production_time": 2400,
+  "squeeze_result": {
+    "id": "minecraft:ice"
+  },
+  "tier": 2
+}

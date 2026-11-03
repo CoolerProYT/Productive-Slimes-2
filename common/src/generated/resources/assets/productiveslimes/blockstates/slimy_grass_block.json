@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "productiveslimes:block/slimy_grass_block"
+      },
+      {
+        "model": "productiveslimes:block/slimy_grass_block",
+        "y": 90
+      },
+      {
+        "model": "productiveslimes:block/slimy_grass_block",
+        "y": 180
+      },
+      {
+        "model": "productiveslimes:block/slimy_grass_block",
+        "y": 270
+      }
+    ]
+  }
+}

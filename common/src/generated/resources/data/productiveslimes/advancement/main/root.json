@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "productiveslimes:block/slimy_stone",
+    "description": {
+      "translate": "advancements.productiveslimes.root.description"
+    },
+    "icon": {
+      "id": "productiveslimes:guide_book"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.productiveslimes.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "tick"
+    ]
+  ],
+  "rewards": {
+    "function": "productiveslimes:give_guide_book"
+  },
+  "sends_telemetry_event": true
+}

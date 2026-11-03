@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "productiveslimes:item/slime_jar_contents",
+    "layer1": "productiveslimes:item/slime_jar"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:soul_sand",
+    "parent_a": "productiveslimes:sand",
+    "parent_b": "productiveslimes:netherrack"
+  },
+  "color": "#513E32",
+  "food": "minecraft:soul_sand",
+  "production_time": 3600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:soul_sand"
+  },
+  "tier": 3
+}

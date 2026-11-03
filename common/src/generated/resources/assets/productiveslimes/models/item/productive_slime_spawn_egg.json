@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "productiveslimes:item/productive_slime_spawn_egg",
+    "layer1": "productiveslimes:item/productive_slime_spawn_egg_overlay"
+  }
+}

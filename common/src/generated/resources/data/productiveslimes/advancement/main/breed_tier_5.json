@@ -1,0 +1,31 @@
+{
+  "parent": "productiveslimes:main/breed_tier_3",
+  "criteria": {
+    "breed_tier_5": {
+      "conditions": {
+        "tier": {
+          "min": 5
+        }
+      },
+      "trigger": "productiveslimes:breed_slime"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.breed_tier_5.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:diamond"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.breed_tier_5.title"
+    }
+  },
+  "requirements": [
+    [
+      "breed_tier_5"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

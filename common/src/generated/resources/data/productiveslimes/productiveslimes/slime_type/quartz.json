@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:quartz_block",
+    "parent_a": "productiveslimes:iron",
+    "parent_b": "productiveslimes:netherrack"
+  },
+  "color": "#E4DDD3",
+  "food": "minecraft:quartz",
+  "production_time": 4800,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:quartz"
+  },
+  "tier": 4
+}

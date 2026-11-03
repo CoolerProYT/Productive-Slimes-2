@@ -1,0 +1,25 @@
+{
+  "parent": "productiveslimes:main/capture_slime",
+  "criteria": {
+    "breed_slime": {
+      "trigger": "productiveslimes:breed_slime"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.breed_slime.description"
+    },
+    "icon": {
+      "id": "minecraft:slime_ball"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.breed_slime.title"
+    }
+  },
+  "requirements": [
+    [
+      "breed_slime"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

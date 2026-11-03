@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": "productiveslimes:slime_crystal",
+    "G": "minecraft:glass",
+    "P": "productiveslimes:slimy_planks",
+    "S": "productiveslimes:slimy_slab"
+  },
+  "pattern": [
+    "SSS",
+    "GCG",
+    "PPP"
+  ],
+  "result": {
+    "id": "productiveslimes:slime_pen"
+  }
+}

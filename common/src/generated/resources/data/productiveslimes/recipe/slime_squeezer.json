@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": "productiveslimes:slimy_stone_bricks",
+    "C": "productiveslimes:slime_crystal",
+    "I": "minecraft:iron_ingot",
+    "P": "minecraft:piston"
+  },
+  "pattern": [
+    "IPI",
+    "ICI",
+    "BBB"
+  ],
+  "result": {
+    "id": "productiveslimes:slime_squeezer"
+  }
+}

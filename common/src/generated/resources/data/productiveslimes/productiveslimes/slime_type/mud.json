@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:mud",
+    "parent_a": "productiveslimes:dirt",
+    "parent_b": "productiveslimes:dirt"
+  },
+  "color": "#3C393D",
+  "food": "minecraft:mud",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:mud"
+  },
+  "tier": 1
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "productiveslimes:slime_crystal",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "GCG",
+    "G G",
+    "GGG"
+  ],
+  "result": {
+    "count": 2,
+    "id": "productiveslimes:slime_jar"
+  }
+}

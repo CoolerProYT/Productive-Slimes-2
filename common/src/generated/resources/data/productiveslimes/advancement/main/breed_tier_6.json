@@ -1,0 +1,31 @@
+{
+  "parent": "productiveslimes:main/breed_tier_5",
+  "criteria": {
+    "breed_tier_6": {
+      "conditions": {
+        "tier": {
+          "min": 6
+        }
+      },
+      "trigger": "productiveslimes:breed_slime"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.breed_tier_6.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "minecraft:netherite_scrap"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.breed_tier_6.title"
+    }
+  },
+  "requirements": [
+    [
+      "breed_tier_6"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

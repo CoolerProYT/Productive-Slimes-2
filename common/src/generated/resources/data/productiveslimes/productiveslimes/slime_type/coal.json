@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:coal_block",
+    "parent_a": "productiveslimes:stone",
+    "parent_b": "productiveslimes:oak"
+  },
+  "color": "#3B3D3B",
+  "food": "minecraft:coal",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:coal"
+  },
+  "tier": 1
+}

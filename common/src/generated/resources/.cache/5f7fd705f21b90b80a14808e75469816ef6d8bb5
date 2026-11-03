@@ -1,0 +1,18 @@
+// 26.3	2026-11-02T15:49:34.2392514	Tags for minecraft:item mod id productiveslimes
+bf5d5588281c9a8801056726b8346ff193c6356d data/minecraft/tags/item/dirt.json
+5ee905756dc27b7ec007c386be95e8115bd2650e data/minecraft/tags/item/fence_gates.json
+45ea18c8301b82fe03486d5de4cab04c69bf456a data/minecraft/tags/item/leaves.json
+7714699fa19d75c6fcf72328a2206421c806f245 data/minecraft/tags/item/logs_that_burn.json
+32c236b5ef67be78fd8c72c6660d39c761939a58 data/minecraft/tags/item/planks.json
+9212e131be6142ef14d02662c8eea2508b15a871 data/minecraft/tags/item/saplings.json
+6a61c8aa21f19db1a5cdde3b9301fff88cbd00a4 data/minecraft/tags/item/stone_crafting_materials.json
+6a61c8aa21f19db1a5cdde3b9301fff88cbd00a4 data/minecraft/tags/item/stone_tool_materials.json
+9a418106b2fb0ad794ef83bccb68f81ef6bbcefe data/minecraft/tags/item/walls.json
+e159836189d1f2d074a8d6f51c1d0e9f9d7bcd45 data/minecraft/tags/item/wooden_buttons.json
+984d093986723d058eb157b2f0f03e3a47fbc440 data/minecraft/tags/item/wooden_doors.json
+3cf32d6321fdfe214e190e21b445acb90232c21e data/minecraft/tags/item/wooden_fences.json
+3a6861fdbed18283215fcaabcde34237a344ad2c data/minecraft/tags/item/wooden_pressure_plates.json
+34b9515aa61783e7f973067e981e4861de5887f8 data/minecraft/tags/item/wooden_slabs.json
+6bb649c84b2b301c745f0ae09fa8529671c0d71c data/minecraft/tags/item/wooden_stairs.json
+e88beefa86bf5c444c4ded0b1344c3f1bbe0b631 data/minecraft/tags/item/wooden_trapdoors.json
+7714699fa19d75c6fcf72328a2206421c806f245 data/productiveslimes/tags/item/slimy_logs.json

@@ -1,0 +1,14 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:magma_block",
+    "parent_a": "productiveslimes:netherrack",
+    "parent_b": "productiveslimes:coal"
+  },
+  "color": "#8E3B1B",
+  "food": "minecraft:magma_cream",
+  "production_time": 3600,
+  "squeeze_result": {
+    "id": "minecraft:magma_block"
+  },
+  "tier": 3
+}

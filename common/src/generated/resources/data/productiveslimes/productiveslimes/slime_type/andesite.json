@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:andesite",
+    "parent_a": "productiveslimes:stone",
+    "parent_b": "productiveslimes:stone"
+  },
+  "color": "#8B8B8C",
+  "food": "minecraft:andesite",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:andesite"
+  },
+  "tier": 1
+}

@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:glowstone",
+    "parent_a": "productiveslimes:netherrack",
+    "parent_b": "productiveslimes:magma"
+  },
+  "color": "#FFD88A",
+  "food": "minecraft:glowstone_dust",
+  "production_time": 4800,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:glowstone_dust"
+  },
+  "tier": 4
+}

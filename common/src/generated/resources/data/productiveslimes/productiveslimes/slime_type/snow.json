@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:snow_block",
+    "parent_a": "productiveslimes:slime",
+    "parent_b": "productiveslimes:slime"
+  },
+  "color": "#F2FCFC",
+  "food": "minecraft:snowball",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 4,
+    "id": "minecraft:snowball"
+  },
+  "tier": 1
+}

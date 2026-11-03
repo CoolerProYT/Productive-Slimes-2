@@ -1,0 +1,14 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:gold_block",
+    "parent_a": "productiveslimes:iron",
+    "parent_b": "productiveslimes:copper"
+  },
+  "color": "#F4CB3C",
+  "food": "minecraft:raw_gold",
+  "production_time": 4800,
+  "squeeze_result": {
+    "id": "minecraft:gold_ingot"
+  },
+  "tier": 4
+}

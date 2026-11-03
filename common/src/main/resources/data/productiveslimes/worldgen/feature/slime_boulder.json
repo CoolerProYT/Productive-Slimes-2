@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:block_blob",
+  "can_place_on": {
+    "type": "minecraft:matching_blocks",
+    "blocks": [
+      "productiveslimes:slimy_grass_block",
+      "productiveslimes:slimy_dirt"
+    ]
+  },
+  "state": "minecraft:slime_block"
+}

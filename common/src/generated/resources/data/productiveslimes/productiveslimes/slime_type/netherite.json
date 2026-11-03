@@ -1,0 +1,14 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:netherite_block",
+    "parent_a": "productiveslimes:diamond",
+    "parent_b": "productiveslimes:obsidian"
+  },
+  "color": "#5A4A4D",
+  "food": "minecraft:netherite_scrap",
+  "production_time": 12000,
+  "squeeze_result": {
+    "id": "minecraft:netherite_scrap"
+  },
+  "tier": 6
+}

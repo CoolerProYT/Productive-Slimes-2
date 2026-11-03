@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:deepslate",
+    "parent_a": "productiveslimes:stone",
+    "parent_b": "productiveslimes:stone"
+  },
+  "color": "#4F4F55",
+  "food": "minecraft:cobbled_deepslate",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:cobbled_deepslate"
+  },
+  "tier": 1
+}

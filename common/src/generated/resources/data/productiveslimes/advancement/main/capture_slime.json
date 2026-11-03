@@ -1,0 +1,25 @@
+{
+  "parent": "productiveslimes:main/slime_crystal",
+  "criteria": {
+    "capture_slime": {
+      "trigger": "productiveslimes:capture_slime"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.capture_slime.description"
+    },
+    "icon": {
+      "id": "productiveslimes:slime_jar"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.capture_slime.title"
+    }
+  },
+  "requirements": [
+    [
+      "capture_slime"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,1 @@
+- Full remake for Minecraft 26.3 on Fabric and NeoForge.

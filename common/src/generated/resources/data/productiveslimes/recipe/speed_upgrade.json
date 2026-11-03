@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": "productiveslimes:slime_crystal",
+    "R": "minecraft:redstone",
+    "S": "minecraft:sugar"
+  },
+  "pattern": [
+    "CRC",
+    "RSR",
+    "CRC"
+  ],
+  "result": {
+    "id": "productiveslimes:speed_upgrade"
+  }
+}

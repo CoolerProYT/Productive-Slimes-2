@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:diorite",
+    "parent_a": "productiveslimes:stone",
+    "parent_b": "productiveslimes:stone"
+  },
+  "color": "#BEBEBF",
+  "food": "minecraft:diorite",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:diorite"
+  },
+  "tier": 1
+}

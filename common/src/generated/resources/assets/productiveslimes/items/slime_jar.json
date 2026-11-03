@@ -1,0 +1,25 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "component": "productiveslimes:slime_type",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "productiveslimes:item/slime_jar"
+    },
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "productiveslimes:item/slime_jar_filled",
+      "tints": [
+        {
+          "type": "productiveslimes:slime_type",
+          "default": -8470674
+        },
+        {
+          "type": "minecraft:constant",
+          "value": -1
+        }
+      ]
+    },
+    "property": "minecraft:has_component"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "productiveslimes:main/capture_slime",
+  "criteria": {
+    "has_slime_pen": {
+      "conditions": {
+        "items": [
+          {
+            "items": "productiveslimes:slime_pen"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.slime_pen.description"
+    },
+    "icon": {
+      "id": "productiveslimes:slime_pen"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.slime_pen.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_slime_pen"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

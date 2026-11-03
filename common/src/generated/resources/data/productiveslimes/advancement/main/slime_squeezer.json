@@ -1,0 +1,32 @@
+{
+  "parent": "productiveslimes:main/slime_pen",
+  "criteria": {
+    "has_slime_squeezer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "productiveslimes:slime_squeezer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.productiveslimes.slime_squeezer.description"
+    },
+    "icon": {
+      "id": "productiveslimes:slime_squeezer"
+    },
+    "title": {
+      "translate": "advancements.productiveslimes.slime_squeezer.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_slime_squeezer"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

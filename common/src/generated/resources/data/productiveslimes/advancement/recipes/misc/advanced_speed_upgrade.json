@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_speed_upgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "productiveslimes:speed_upgrade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "productiveslimes:advanced_speed_upgrade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_speed_upgrade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "productiveslimes:advanced_speed_upgrade"
+    ]
+  }
+}

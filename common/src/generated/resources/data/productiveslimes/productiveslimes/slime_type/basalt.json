@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:basalt",
+    "parent_a": "productiveslimes:deepslate",
+    "parent_b": "productiveslimes:netherrack"
+  },
+  "color": "#505055",
+  "food": "minecraft:basalt",
+  "production_time": 3600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:basalt"
+  },
+  "tier": 3
+}

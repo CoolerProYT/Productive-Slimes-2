@@ -1,0 +1,15 @@
+{
+  "breeding": {
+    "catalyst": "minecraft:gravel",
+    "parent_a": "productiveslimes:sand",
+    "parent_b": "productiveslimes:stone"
+  },
+  "color": "#857F7E",
+  "food": "minecraft:gravel",
+  "production_time": 1600,
+  "squeeze_result": {
+    "count": 2,
+    "id": "minecraft:gravel"
+  },
+  "tier": 1
+}
