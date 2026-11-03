@@ -3,15 +3,17 @@
   "criteria": {
     "in_slimy_land": {
       "conditions": {
-        "player": {
-          "type": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "minecraft:location": {
-              "biomes": "productiveslimes:slimy_land"
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:location": {
+                "biomes": "productiveslimes:slimy_land"
+              }
             }
           }
-        }
+        ]
       },
       "trigger": "minecraft:location"
     }

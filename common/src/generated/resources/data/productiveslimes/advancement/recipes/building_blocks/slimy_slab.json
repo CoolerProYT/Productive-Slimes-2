@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipes": "productiveslimes:slimy_slab"
+        "recipe": "productiveslimes:slimy_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -231,7 +231,7 @@ public class ProductiveSlime extends AbstractCubeMob {
 
     private void eat(ItemStack food) {
         if (this.level() instanceof ServerLevel level) {
-            level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, ItemStackTemplate.fromNonEmptyStack(food, 1)), this.getX(), this.getY() + this.getBbHeight() * 0.5, this.getZ(), 8, 0.2, 0.2, 0.2, 0.05);
+            level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, ItemStackTemplate.fromNonEmptyStack(food.copyWithCount(1))), this.getX(), this.getY() + this.getBbHeight() * 0.5, this.getZ(), 8, 0.2, 0.2, 0.2, 0.05);
         }
         this.playSound(SoundEvents.GENERIC_EAT.value(), 0.6F, 1.2F);
         this.gameEvent(GameEvent.EAT);
@@ -310,7 +310,7 @@ public class ProductiveSlime extends AbstractCubeMob {
     }
 
     @Override
-    protected boolean canDealDamage() {
+    protected boolean isDealsDamage() {
         return false;
     }
 

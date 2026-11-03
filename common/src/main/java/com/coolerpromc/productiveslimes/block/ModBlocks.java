@@ -13,7 +13,6 @@ import com.coolerpromc.productiveslimes.worldgen.ModFeatures;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.sounds.AmbientLeavesBlockSoundPlayer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
@@ -31,6 +30,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.util.random.WeightedList;
 
+import java.util.Optional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
@@ -40,7 +40,7 @@ public class ModBlocks {
 
     public static final BlockSetType SLIMY_SET = new BlockSetType(Constants.MODID + ":slimy");
     public static final WoodType SLIMY_WOOD_TYPE = new WoodType(Constants.MODID + ":slimy", SLIMY_SET);
-    public static final TreeGrower SLIMY_TREE = new TreeGrower(Constants.MODID + ":slimy", WeightedList.of(ModFeatures.SLIMY_TREE), WeightedList.of(), WeightedList.of(), null);
+    public static final TreeGrower SLIMY_TREE = new TreeGrower(Constants.MODID + ":slimy", Optional.empty(), Optional.of(ModFeatures.SLIMY_TREE), Optional.empty());
 
     public static final RegistryHandler.Blocks<SlimePenBlock> SLIME_PEN = registerBlock("slime_pen", SlimePenBlock::new, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GREEN).strength(2.0F).sound(SoundType.GLASS).noOcclusion().requiresCorrectToolForDrops());
     public static final RegistryHandler.Blocks<SlimeSqueezerBlock> SLIME_SQUEEZER = registerBlock("slime_squeezer", SlimeSqueezerBlock::new, BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(3.0F).sound(SoundType.COPPER).noOcclusion().requiresCorrectToolForDrops());
@@ -69,7 +69,7 @@ public class ModBlocks {
     public static final RegistryHandler.Blocks<ModTrapDoorBlock> SLIMY_TRAPDOOR = registerBlock("slimy_trapdoor", p -> new ModTrapDoorBlock(SLIMY_SET, p), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR).mapColor(MapColor.COLOR_LIGHT_GREEN));
     public static final RegistryHandler.Blocks<ModButtonBlock> SLIMY_BUTTON = registerBlock("slimy_button", p -> new ModButtonBlock(SLIMY_SET, 30, p), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON));
     public static final RegistryHandler.Blocks<ModPressurePlateBlock> SLIMY_PRESSURE_PLATE = registerBlock("slimy_pressure_plate", p -> new ModPressurePlateBlock(SLIMY_SET, p), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE).mapColor(MapColor.COLOR_LIGHT_GREEN));
-    public static final RegistryHandler.Blocks<UntintedParticleLeavesBlock> SLIMY_LEAVES = registerBlock("slimy_leaves", p -> new UntintedParticleLeavesBlock(0.02F, ParticleTypes.ITEM_SLIME, AmbientLeavesBlockSoundPlayer.noAmbientSound(), p), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).mapColor(MapColor.COLOR_LIGHT_GREEN));
+    public static final RegistryHandler.Blocks<UntintedParticleLeavesBlock> SLIMY_LEAVES = registerBlock("slimy_leaves", p -> new UntintedParticleLeavesBlock(0.02F, ParticleTypes.ITEM_SLIME, p), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).mapColor(MapColor.COLOR_LIGHT_GREEN));
     public static final RegistryHandler.Blocks<ModSaplingBlock> SLIMY_SAPLING = registerBlock("slimy_sapling", p -> new ModSaplingBlock(SLIMY_TREE, p), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).mapColor(MapColor.COLOR_LIGHT_GREEN));
 
     private static <T extends Block> RegistryHandler.Blocks<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> func, BlockBehaviour.Properties properties) {

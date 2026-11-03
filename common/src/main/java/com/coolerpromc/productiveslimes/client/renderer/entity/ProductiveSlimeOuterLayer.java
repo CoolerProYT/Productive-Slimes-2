@@ -29,9 +29,9 @@ public class ProductiveSlimeOuterLayer extends RenderLayer<ProductiveSlimeRender
 
         int overlayCoords = LivingEntityRenderer.getOverlayCoords(state, 0.0F);
         if (appearsGlowingWithInvisibility) {
-            submitNodeCollector.order(1).submitModel(this.model, state, poseStack, RenderTypes.outline(ProductiveSlimeRenderer.TEXTURE), lightCoords, overlayCoords, state.outlineColor);
+            submitNodeCollector.order(1).submitModel(this.model, state, poseStack, RenderTypes.outline(ProductiveSlimeRenderer.TEXTURE), lightCoords, overlayCoords, state.outlineColor, null);
         } else {
-            submitNodeCollector.order(1).submitModel(this.model, state, poseStack, RenderTypes.entityTranslucent(ProductiveSlimeRenderer.TEXTURE), lightCoords, overlayCoords, ARGB.opaque(state.color), null, state.outlineColor);
+            submitNodeCollector.order(1).submitModel(this.model, state, poseStack, RenderTypes.entityTranslucent(ProductiveSlimeRenderer.TEXTURE), lightCoords, overlayCoords, ARGB.opaque(state.color), null, state.outlineColor, null);
         }
     }
 }

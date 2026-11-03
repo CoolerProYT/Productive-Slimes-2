@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipes": "productiveslimes:slimy_fence"
+        "recipe": "productiveslimes:slimy_fence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

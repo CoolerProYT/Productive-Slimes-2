@@ -16,7 +16,7 @@ dependencies {
     compileOnly("maven.modrinth:jade:${jade_version}+neoforge")
 
     // In the dev runs only (runClient/runServer/runData); not published as dependencies of the mod.
-    localRuntime("com.coolerpromc.mctest:mctest-neoforge-${minecraft_version}:26.3.0.3") { transitive = false }
+    localRuntime("com.coolerpromc.mctest:mctest-neoforge-${minecraft_version}:26.2.0.1") { transitive = false }
     localRuntime("mezz.jei:jei-${dependencies_mc_version}-neoforge:${jei_version}")
     localRuntime("maven.modrinth:jade:${jade_version}+neoforge")
 }

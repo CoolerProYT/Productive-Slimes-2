@@ -2,14 +2,21 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "condition": "minecraft:tool/can_shear",
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "items": "minecraft:shears"
+          }
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
           "name": "productiveslimes:slime_sprouts"
         }
       ],
-      "rolls": 1
+      "rolls": 1.0
     }
   ],
   "random_sequence": "productiveslimes:blocks/slime_sprouts"

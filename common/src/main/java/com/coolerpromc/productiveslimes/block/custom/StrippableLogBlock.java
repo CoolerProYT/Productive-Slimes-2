@@ -32,7 +32,7 @@ public class StrippableLogBlock extends RotatedPillarBlock {
             return super.useItemOn(itemStack, state, level, pos, player, hand, hitResult);
         }
 
-        level.playSound(player, pos, SoundEvents.AXE_STRIP.value(), SoundSource.BLOCKS, 1.0F, 1.0F);
+        level.playSound(player, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
         if (!level.isClientSide()) {
             level.setBlock(pos, this.stripped.get().withPropertiesOf(state), Block.UPDATE_ALL_IMMEDIATE);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, state));

@@ -6,7 +6,8 @@ import com.mojang.serialization.DataResult;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
-import net.minecraft.core.registries.codec.RegistryCodecs;
+import net.minecraft.core.RegistryCodecs;
+import net.minecraft.resources.RegistryFixedCodec;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -29,7 +30,7 @@ public record SlimeType(int color, HolderSet<Item> food, ItemStackTemplate squee
 
     public static final Codec<SlimeType> DIRECT_CODEC = RecordCodecBuilder.create(i -> i.group(
             COLOR_CODEC.fieldOf("color").forGetter(SlimeType::color),
-            RegistryCodecs.holderSet(Registries.ITEM).fieldOf("food").forGetter(SlimeType::food),
+            RegistryCodecs.homogeneousList(Registries.ITEM).fieldOf("food").forGetter(SlimeType::food),
             ItemStackTemplate.CODEC.fieldOf("squeeze_result").forGetter(SlimeType::squeezeResult),
             ExtraCodecs.POSITIVE_INT.fieldOf("production_time").forGetter(SlimeType::productionTime),
             ExtraCodecs.NON_NEGATIVE_INT.optionalFieldOf("tier", 0).forGetter(SlimeType::tier),
@@ -37,7 +38,7 @@ public record SlimeType(int color, HolderSet<Item> food, ItemStackTemplate squee
             Codec.BOOL.optionalFieldOf("natural_spawn", false).forGetter(SlimeType::naturalSpawn)
     ).apply(i, SlimeType::new));
 
-    public static final Codec<Holder<SlimeType>> CODEC = RegistryCodecs.holder(REGISTRY_KEY);
+    public static final Codec<Holder<SlimeType>> CODEC = RegistryFixedCodec.create(REGISTRY_KEY);
     public static final StreamCodec<RegistryFriendlyByteBuf, Holder<SlimeType>> STREAM_CODEC = ByteBufCodecs.holderRegistry(REGISTRY_KEY);
 
     public boolean isFood(ItemStack stack) {

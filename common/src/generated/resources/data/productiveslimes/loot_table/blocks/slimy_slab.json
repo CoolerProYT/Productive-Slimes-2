@@ -5,26 +5,28 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "modifier": [
+          "functions": [
             {
-              "type": "minecraft:set_count",
-              "condition": {
-                "type": "minecraft:match_block",
-                "blocks": "productiveslimes:slimy_slab",
-                "state": {
-                  "type": "double"
+              "conditions": [
+                {
+                  "block": "productiveslimes:slimy_slab",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "type": "double"
+                  }
                 }
-              },
-              "count": 2
+              ],
+              "count": 2.0,
+              "function": "minecraft:set_count"
             },
             {
-              "type": "minecraft:explosion_decay"
+              "function": "minecraft:explosion_decay"
             }
           ],
           "name": "productiveslimes:slimy_slab"
         }
       ],
-      "rolls": 1
+      "rolls": 1.0
     }
   ],
   "random_sequence": "productiveslimes:blocks/slimy_slab"

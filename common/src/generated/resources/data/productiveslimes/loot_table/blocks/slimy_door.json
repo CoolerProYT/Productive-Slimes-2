@@ -2,23 +2,27 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "condition": {
-        "type": "minecraft:survives_explosion"
-      },
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "condition": {
-            "type": "minecraft:match_block",
-            "blocks": "productiveslimes:slimy_door",
-            "state": {
-              "half": "lower"
+          "conditions": [
+            {
+              "block": "productiveslimes:slimy_door",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
             }
-          },
+          ],
           "name": "productiveslimes:slimy_door"
         }
       ],
-      "rolls": 1
+      "rolls": 1.0
     }
   ],
   "random_sequence": "productiveslimes:blocks/slimy_door"

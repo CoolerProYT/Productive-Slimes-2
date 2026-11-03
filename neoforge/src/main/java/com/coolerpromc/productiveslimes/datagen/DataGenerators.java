@@ -3,7 +3,6 @@ package com.coolerpromc.productiveslimes.datagen;
 import com.coolerpromc.productiveslimes.Constants;
 import com.coolerpromc.productiveslimes.slime.SlimeType;
 import net.minecraft.core.RegistrySetBuilder;
-import net.minecraft.core.registries.Registries;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -16,11 +15,10 @@ public class DataGenerators {
         event.createProvider(ModLanguageProvider::new);
         event.createProvider(ModBlockTagsProvider::new);
         event.createProvider(ModItemTagsProvider::new);
-        event.createWorldRegistryObjects(new RegistrySetBuilder()
+        event.createProvider(ModRecipeProvider.Runner::new);
+        event.createProvider(ModLootTableProvider::create);
+        event.createProvider(ModAdvancementProvider::create);
+        event.createDatapackRegistryObjects(new RegistrySetBuilder()
                 .add(SlimeType.REGISTRY_KEY, ModSlimeTypeProvider::bootstrap));
-        event.createReloadableRegistryObjects(new RegistrySetBuilder()
-                .add(Registries.LOOT_TABLE, ModLootTableProvider.create())
-                .add(Registries.ADVANCEMENT, ModAdvancementProvider.create())
-                .add(ModRecipeProvider.create()));
     }
 }

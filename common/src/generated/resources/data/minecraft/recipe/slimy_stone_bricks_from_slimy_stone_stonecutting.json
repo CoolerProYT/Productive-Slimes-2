@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "productiveslimes:slimy_stone",
+  "result": {
+    "id": "productiveslimes:slimy_stone_bricks"
+  }
+}

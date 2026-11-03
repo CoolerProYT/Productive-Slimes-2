@@ -4,6 +4,8 @@ import com.coolerpromc.productiveslimes.block.ModBlocks;
 import com.coolerpromc.productiveslimes.item.ModItems;
 import com.coolerpromc.productiveslimes.platform.util.RegistryHandler;
 import com.coolerpromc.productiveslimes.worldgen.ModStructures;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.data.loot.LootTableSubProvider;
@@ -14,31 +16,35 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.UniformContainerBase;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
-import net.minecraft.world.level.storage.loot.providers.number.floats.ContextFloatProviders;
-import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+
+import net.minecraft.resources.ResourceKey;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.BiConsumer;
 
 public final class ModLootTableProvider {
     private ModLootTableProvider() {
     }
 
-    public static LootTableProvider create() {
-        return new LootTableProvider(Set.of(), List.of(
+    public static LootTableProvider create(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        return new LootTableProvider(output, Set.of(), List.of(
                 new LootTableProvider.SubProviderEntry(BlockLoot::new, LootContextParamSets.BLOCK),
                 new LootTableProvider.SubProviderEntry(ChestLoot::new, LootContextParamSets.CHEST)
-        ));
+        ), lookupProvider);
     }
 
     private static class BlockLoot extends BlockLootSubProvider {
         private static final float[] SAPLING_CHANCES = new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F};
 
-        BlockLoot(LootTableSubProvider.Context output) {
-            super(Set.of(), FeatureFlags.REGISTRY.allFlags(), output);
+        BlockLoot(HolderLookup.Provider registries) {
+            super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
         }
 
         @Override
@@ -80,11 +86,11 @@ public final class ModLootTableProvider {
         }
     }
 
-    private record ChestLoot(LootTableSubProvider.Context output) implements LootTableSubProvider {
+    private record ChestLoot(HolderLookup.Provider registries) implements LootTableSubProvider {
         @Override
-        public void run() {
-            this.output.accept(ModStructures.SLIME_SHRINE_CHEST, LootTable.lootTable()
-                    .withPool(LootPool.lootPool().setRolls(ContextIntProviders.between(4, 7))
+        public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> output) {
+            output.accept(ModStructures.SLIME_SHRINE_CHEST, LootTable.lootTable()
+                    .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(4, 7))
                             .add(entry(ModItems.SLIME_CRYSTAL, 20, 2, 5))
                             .add(entry(ModItems.SLIME_JAR, 15, 1, 3))
                             .add(entry(Items.SLIME_BALL, 15, 3, 8))
@@ -93,16 +99,16 @@ public final class ModLootTableProvider {
                             .add(entry(Items.COPPER_INGOT, 8, 2, 6))
                             .add(entry(Items.COAL, 10, 3, 8))
                             .add(entry(Items.BREAD, 10, 2, 4)))
-                    .withPool(LootPool.lootPool().setRolls(ContextIntProviders.exactly(1))
+                    .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
                             .add(entry(ModItems.SPEED_UPGRADE, 3, 1, 1))
                             .add(entry(ModBlocks.SLIME_PEN, 2, 1, 1))
                             .add(entry(Items.COPPER_BLOCK.weathering().unaffected(), 1, 1, 1))
                             .add(entry(ModItems.SLIME_CRYSTAL, 4, 4, 8))));
         }
 
-        private static UniformContainerBase.Builder<?> entry(ItemLike item, int weight, int min, int max) {
+        private static LootPoolSingletonContainer.Builder<?> entry(ItemLike item, int weight, int min, int max) {
             return LootItem.lootTableItem(item).setWeight(weight)
-                    .apply(SetItemCountFunction.setCount(ContextIntProviders.between(min, max)));
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)));
         }
     }
 }

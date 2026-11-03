@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipes": "productiveslimes:speed_upgrade"
+        "recipe": "productiveslimes:speed_upgrade"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

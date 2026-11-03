@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipes": "productiveslimes:slime_pen"
+        "recipe": "productiveslimes:slime_pen"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

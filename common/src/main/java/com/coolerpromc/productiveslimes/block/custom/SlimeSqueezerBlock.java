@@ -1,5 +1,6 @@
 package com.coolerpromc.productiveslimes.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import com.coolerpromc.productiveslimes.block.entity.ModBlockEntities;
 import com.coolerpromc.productiveslimes.block.entity.custom.SlimeSqueezerBlockEntity;
 import com.coolerpromc.productiveslimes.platform.Services;
@@ -29,6 +30,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jspecify.annotations.Nullable;
 
 public class SlimeSqueezerBlock extends BaseEntityBlock {
+    public static final MapCodec<SlimeSqueezerBlock> CODEC = simpleCodec(SlimeSqueezerBlock::new);
+
     public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty WORKING = BooleanProperty.create("working");
 
@@ -75,5 +78,10 @@ public class SlimeSqueezerBlock extends BaseEntityBlock {
     @Override
     public <T extends BlockEntity> @Nullable BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
         return level.isClientSide() ? null : createTickerHelper(type, ModBlockEntities.SLIME_SQUEEZER.get(), SlimeSqueezerBlockEntity::serverTick);
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 }

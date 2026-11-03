@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipes": "productiveslimes:slimy_stairs"
+        "recipe": "productiveslimes:slimy_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

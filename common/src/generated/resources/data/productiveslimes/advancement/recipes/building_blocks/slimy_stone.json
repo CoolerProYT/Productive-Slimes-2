@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipes": "productiveslimes:slimy_stone"
+        "recipe": "productiveslimes:slimy_stone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

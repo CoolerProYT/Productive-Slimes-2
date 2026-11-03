@@ -3,36 +3,18 @@ package com.coolerpromc.productiveslimes.datagen;
 import com.coolerpromc.productiveslimes.block.ModBlocks;
 import com.coolerpromc.productiveslimes.item.ModItems;
 import com.coolerpromc.productiveslimes.tag.ModTags;
-import net.minecraft.advancements.Advancement;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.MultiRegistryBootstrap;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.resources.ResourceKey;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Recipe;
 
-import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
-    public ModRecipeProvider(BootstrapContext<Recipe<?>> recipeOutput, BootstrapContext<Advancement> advancementOutput) {
-        super(recipeOutput, advancementOutput);
-    }
-
-    public static MultiRegistryBootstrap create() {
-        return new MultiRegistryBootstrap() {
-            @Override
-            public Set<ResourceKey<? extends Registry<?>>> requestedRegistries() {
-                return Set.of(Registries.RECIPE, Registries.ADVANCEMENT);
-            }
-
-            @Override
-            public void run(MultiRegistryBootstrap.BootstrapGetter registries) {
-                new ModRecipeProvider(registries.get(Registries.RECIPE), registries.get(Registries.ADVANCEMENT)).buildRecipes();
-            }
-        };
+    public ModRecipeProvider(HolderLookup.Provider lookupProvider, RecipeOutput output) {
+        super(lookupProvider, output);
     }
 
     @Override
@@ -116,5 +98,21 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModItems.SLIME_CRYSTAL)
                 .unlockedBy(getHasName(ModItems.SLIME_CRYSTAL), has(ModItems.SLIME_CRYSTAL))
                 .save(output, "productiveslimes:slime_ball_from_slime_crystal");
+    }
+
+    public static final class Runner extends RecipeProvider.Runner {
+        public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+            super(output, lookupProvider);
+        }
+
+        @Override
+        protected RecipeProvider createRecipeProvider(HolderLookup.Provider lookupProvider, RecipeOutput output) {
+            return new ModRecipeProvider(lookupProvider, output);
+        }
+
+        @Override
+        public String getName() {
+            return "Productive Slimes recipes";
+        }
     }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipes": "productiveslimes:slime_ball_from_slime_crystal"
+        "recipe": "productiveslimes:slime_ball_from_slime_crystal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

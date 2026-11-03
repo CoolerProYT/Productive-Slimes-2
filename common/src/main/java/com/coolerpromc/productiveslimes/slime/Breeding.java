@@ -3,7 +3,7 @@ package com.coolerpromc.productiveslimes.slime;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.HolderSet;
-import net.minecraft.core.registries.codec.RegistryCodecs;
+import net.minecraft.core.RegistryCodecs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
@@ -17,7 +17,7 @@ public record Breeding(ResourceKey<SlimeType> parentA, ResourceKey<SlimeType> pa
     public static final Codec<Breeding> CODEC = RecordCodecBuilder.create(i -> i.group(
             ResourceKey.codec(SlimeType.REGISTRY_KEY).fieldOf("parent_a").forGetter(Breeding::parentA),
             ResourceKey.codec(SlimeType.REGISTRY_KEY).fieldOf("parent_b").forGetter(Breeding::parentB),
-            RegistryCodecs.holderSet(Registries.BLOCK).optionalFieldOf("catalyst").forGetter(Breeding::catalyst),
+            RegistryCodecs.homogeneousList(Registries.BLOCK).optionalFieldOf("catalyst").forGetter(Breeding::catalyst),
             Codec.BOOL.optionalFieldOf("consume_catalyst", false).forGetter(Breeding::consumeCatalyst)
     ).apply(i, Breeding::new));
 

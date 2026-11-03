@@ -1,5 +1,6 @@
 package com.coolerpromc.productiveslimes.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import com.coolerpromc.productiveslimes.block.entity.ModBlockEntities;
 import com.coolerpromc.productiveslimes.block.entity.custom.SlimePenBlockEntity;
 import com.coolerpromc.productiveslimes.platform.Services;
@@ -33,6 +34,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jspecify.annotations.Nullable;
 
 public class SlimePenBlock extends BaseEntityBlock {
+    public static final MapCodec<SlimePenBlock> CODEC = simpleCodec(SlimePenBlock::new);
+
     public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
     private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 15, 16);
 
@@ -109,5 +112,10 @@ public class SlimePenBlock extends BaseEntityBlock {
     @Override
     public <T extends BlockEntity> @Nullable BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
         return level.isClientSide() ? null : createTickerHelper(type, ModBlockEntities.SLIME_PEN.get(), SlimePenBlockEntity::serverTick);
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 }
