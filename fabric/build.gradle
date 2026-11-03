@@ -78,5 +78,6 @@ publishMods {
         projectId = '2G12HGTt'
         accessToken = findProperty("MODRINTH_TOKEN")
         minecraftVersions.add(minecraft_version)
+        environment = CLIENT_AND_SERVER
     }
 }
